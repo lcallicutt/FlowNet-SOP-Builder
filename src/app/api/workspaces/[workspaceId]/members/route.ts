@@ -21,6 +21,7 @@ export async function GET(_req: NextRequest, { params }: Params) {
     return NextResponse.json({
       members: members.map((m) => ({
         id: m.id,
+        userId: m.userId,
         role: m.role,
         status: m.status,
         name: m.user?.name ?? null,
